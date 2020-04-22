@@ -146,7 +146,7 @@ def hangman(secret_word):
         print('- - - - - - - - -')
         print('You have', lives, 'guesses left.')
         print('Available Letters: ', get_available_letters(letters_guessed))
-        guess = input('Guess a letter or word: ').lower()
+        guess = input('Guess a letter: ').lower()
         
         if guess in letters_guessed:
             print('You have guessed this letter before: ', get_guessed_word(secret_word, letters_guessed))
