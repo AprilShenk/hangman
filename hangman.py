@@ -1,9 +1,3 @@
-# Hangman Game
-# -----------------------------------
-# Helper code
-# You don't need to understand this helper code,
-# but you will have to know how to use the functions
-# (so be sure to read the docstrings!)
 import random
 import string 
 
@@ -37,11 +31,6 @@ def choose_word(wordlist):
     """
     return random.choice(wordlist)
 
-
-# end of helper code
-
-# -----------------------------------
-
 # Load the list of words into the variable wordlist
 # so that it can be accessed from anywhere in the program
 wordlist = load_words()
@@ -56,8 +45,6 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    #    pass
 
 # turn the logic around for a shorter runtime if the word is not guessed
     for letter in secret_word:
@@ -102,7 +89,6 @@ def check_guess(guess, secret_word):
     returns: boolean, True if the letter is in the word, False if the letter is not
     '''
 
-    # You don't need if/then because 'in' returns True or False
     return guess in secret_word
 
 
@@ -131,15 +117,13 @@ def hangman(secret_word):
 
     Follows the other limitations detailed in the problem write-up.
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    #    pass
+
     lives = 6
     letters_guessed = ''
 
     print('Welcome to the Game of Hangman!')
     print(f'I am thinking of a word that is {len(secret_word)} letters long.')
     
-    # use 'not' to test for '== False'
     # once lives == 0 it will resolve to False, any positive integer resolves to True
     
     while not is_word_guessed(secret_word, letters_guessed) and lives:
@@ -170,7 +154,6 @@ def hangman(secret_word):
 
 
 if __name__ == "__main__":
-    # pass
 
     # To test part 2, comment out the pass line above and
     # uncomment the following two lines.
@@ -178,6 +161,5 @@ if __name__ == "__main__":
     # secret_word = choose_word(wordlist)
     # hangman(secret_word)
 
-    # can do this in one line:
     hangman(choose_word(wordlist))
 

@@ -1,5 +1,3 @@
-# Hangman Game
-# -----------------------------------
 import random
 import string 
 import re
